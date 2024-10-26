@@ -1,0 +1,40 @@
+.header-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.custom-navbar {
+    /* flex: 1; */
+    position: absolute;
+    right: -87%;
+
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+}
+
+.toggle-theme-btn {
+    border: none;
+    background: none;
+}
+
+body.dark-mode {
+    background-color: #303841;
+    color: #fff;
+}
+
+body.dark-mode .navbar-brand {
+    color: #fff;
+}
+
+.notification {
+    color: #00aaa0;
+}
+
+

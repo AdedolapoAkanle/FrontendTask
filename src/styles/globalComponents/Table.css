@@ -1,0 +1,78 @@
+.table-container {
+    /* margin: 0 10rem; */
+    margin-left: 350px;
+    margin-right: 50px;
+    font-size: 1.2rem;
+    transition: margin-left 0.3s ease;
+}
+
+table-container.collapsed {
+    margin-left: 80px; 
+}
+
+.table-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.table-container table {
+    width: 100%;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /* padding: 3rem; */
+}
+
+.table-container thead {
+    font-size: 1.5rem;
+    padding: .5rem 2rem;
+    /* text-align: center; */
+}
+
+.table-container thead tr th{
+    padding: .5rem 2rem;
+}
+
+.table-container tbody {
+    font-size: 1.3rem;
+}
+
+.table-container tbody td{
+    padding: .5rem 2rem;
+}
+
+.table-container tbody tr td span{
+    /* background-color: red; */
+    /* display: flex;
+    margin-right: 200px;
+    justify-content: center; */
+}
+
+.table-search {
+    display: flex;
+    max-width: 300px;
+    margin-left: auto;
+}
+
+.table-input {
+    padding: 3rem;
+    margin: 1rem 0;
+}
+
+.modal-button {
+     background-color:"2772db";
+     color:"ffffff";
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    .table-container {
+        margin: 0 50px;
+        font-size: .9rem;
+    }
+
+    .table-container td:nth-child(3), .table-container th:nth-child(3) {
+        display: none; 
+    }
+}

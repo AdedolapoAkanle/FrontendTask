@@ -1,0 +1,30 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    min-height: 20px;
+}
+
+.pagination-container button {
+    padding: .4rem .6rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-color: #2772db;
+    color: #ffffff;
+
+}
+
+.pagination-container button:disabled {
+    background-color: #acdcee;
+    color: #ececec;
+}
+
+
+.pagination-container span {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
