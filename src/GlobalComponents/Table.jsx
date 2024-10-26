@@ -8,11 +8,16 @@ import { CostumButton } from './CostumButton';
 const TableComponent = ({ data, columns, title, isCollapsed }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const rowsPerPage = 5;
-    const [selectedRow, setSelectedRow] = useState(null);  // For row click
+    const [selectedRow, setSelectedRow] = useState(null); 
+    const [search, setSearch] = useState(""); 
 
     const indexOfLastRow = currentPage * rowsPerPage;
     const indexOfFirstRow = indexOfLastRow - rowsPerPage;
     const currentRows = data.slice(indexOfFirstRow, indexOfLastRow);
+
+    const filteredData = data.filter(row => 
+        row.name && row.name.toLowerCase().includes(search.toLowerCase()) 
+    );
 
     const handleRowClick = (row) => {
         setSelectedRow(row);  
@@ -25,6 +30,8 @@ const TableComponent = ({ data, columns, title, isCollapsed }) => {
                 <FormControl
                     className='table-input'
                     placeholder="Search by name"
+                    value={search} 
+                    onChange={(e) => setSearch(e.target.value)} 
                 />
             </InputGroup>
             <table className="table table-striped">
@@ -56,7 +63,7 @@ const TableComponent = ({ data, columns, title, isCollapsed }) => {
 
             <PaginationComponent
                 currentPage={currentPage}
-                totalRows={data.length}
+                totalRows={filteredData.length}
                 rowsPerPage={rowsPerPage}
                 setCurrentPage={setCurrentPage}
             />

@@ -4,17 +4,19 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 import TableComponent from '../GlobalComponents/Table';
 import { connect } from 'react-redux';
 import { PostAction } from '../redux/actions/type';
+import { api } from '../api/api';
 
 const Posts = ({state, updateState}) => {
     const {posts, search, isCollapsed} = state
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-            updateState({posts:response.data})
+            const response = await api("posts");
+            updateState({...posts, posts:response});
         };
         fetchPosts();
     }, [updateState]);
+
 
     const filteredPosts = posts.filter(post => post.title.toLowerCase().includes(search ? search.toLowerCase() : ''));
 

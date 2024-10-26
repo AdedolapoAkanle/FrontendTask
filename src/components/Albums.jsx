@@ -4,6 +4,7 @@ import { InputGroup, FormControl } from 'react-bootstrap';
 import TableComponent from '../GlobalComponents/Table';
 import { connect } from 'react-redux';
 import { AlbumAction } from '../redux/actions/type';
+import { api } from '../api/api';
 
 const Albums = ({state, updateState}) => {
     const { albums, search } = state;
@@ -11,8 +12,9 @@ const Albums = ({state, updateState}) => {
 
     useEffect(() => {
         const fetchAlbums = async () => {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/albums');
-            updateState({...albums, albums:response.data});
+            const response = await api("albums");
+            console.log(response, "res")
+            updateState({...albums, albums:response});
         };
         fetchAlbums();
     }, [updateState]);

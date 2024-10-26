@@ -4,17 +4,18 @@ import { InputGroup, FormControl, Spinner } from 'react-bootstrap';
 import TableComponent from '../GlobalComponents/Table';
 import { connect } from 'react-redux';
 import { TodoAction } from '../redux/actions/type';
+import { api } from '../api/api';
 
 const Todos = ({state, updateState}) => {
     const {todos, search} = state
 
     useEffect(() => {
         const fetchTodos = async () => {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-            updateState({todos:response.data})
+            const response = await api("todos");
+            updateState({...todos, todos:response});
         };
         fetchTodos();
-    }, []);
+    }, [updateState]);
 
     const filteredTodos = todos.filter(todo =>
         todo.title.toLowerCase().includes(search? search.toLowerCase() : "")

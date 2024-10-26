@@ -5,6 +5,7 @@ import TodosReducer from "./TodosReducer";
 import AlbumsReducer from "./AlbumReducer";
 import SettingsReducer from "./SettingsReducer";
 import HeaderReducer from "./HeaderReducer";
+import TableReducer from "./TableReducer";
 
 const joinReducers = combineReducers({
   user: UsersReducer,
@@ -12,7 +13,8 @@ const joinReducers = combineReducers({
   todo: TodosReducer,
   album: AlbumsReducer,
   settings: SettingsReducer,
-  header: HeaderReducer
+  header: HeaderReducer,
+  table: TableReducer
 });
 
 export const store = createStore(

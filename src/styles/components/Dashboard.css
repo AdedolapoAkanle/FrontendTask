@@ -1,10 +1,7 @@
 .dashboard-container {
     padding: 2rem;
-    /* position: relative;  */
-    width: 100%;
+    width: 80%;
     margin: auto;
-    /* margin-left: 300px; */
-    /* margin-right: 50px; */
 }
 
 .summary-container {
@@ -26,7 +23,7 @@
 }
 
 .summary-item h3 {
-    font-size: 2.5rem; 
+    font-size: 2rem; 
     margin-bottom: 0.5rem; 
     color: #fafafa; 
     display: flex;
@@ -35,12 +32,12 @@
 }
 
 .summary-item h3 span {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 1rem;
 }
 
 .summary-item p {
-    font-size: 3rem; 
+    font-size: 2rem; 
     font-weight: bold;
     color: #333; 
     margin: 0; 

@@ -1,4 +1,4 @@
-import { ALBUMS, HEADER, POSTS, SETTINGS, TODOS, USERS } from ".";
+import { ALBUMS, HEADER, POSTS, SETTINGS, TABLE, TODOS, USERS } from ".";
 
 export const UserAction = (param) => {
   return {
@@ -38,6 +38,13 @@ export const SettingsAction = (param) => {
 export const HeaderAction = (param) => {
   return {
     type: HEADER,
+    payload: param,
+  };
+};
+
+export const TableAction = (param) => {
+  return {
+    type: TABLE,
     payload: param,
   };
 };

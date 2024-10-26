@@ -1,26 +1,3 @@
-// import React from 'react';
-// import { Nav } from 'react-bootstrap';
-// import { NavLink } from 'react-router-dom';
-
-// const Sidebar = ({ isCollapsed, setCollapsed }) => {
-//     return (
-//         <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
-//             <Nav className="flex-column bg-light" style={{backgroundColor:'yellow'}}>
-//                 <Nav.Link as={NavLink} to="/users">Users</Nav.Link>
-//                 <Nav.Link as={NavLink} to="/posts">Posts</Nav.Link>
-//                 <Nav.Link as={NavLink} to="/todos">Todos</Nav.Link>
-//                 {/* Other links */}
-//             </Nav>
-//             <button onClick={() => setCollapsed(!isCollapsed)}>
-//                 {isCollapsed ? 'Expand' : 'Collapse'}
-//             </button>
-//         </div>
-//     );
-// };
-
-// export default Sidebar;
-
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BsChevronDoubleRight, BsChevronDoubleLeft, BsListCheck, BsImage, BsGear, BsChat, BsPerson, BsHouseDoor } from 'react-icons/bs'; 

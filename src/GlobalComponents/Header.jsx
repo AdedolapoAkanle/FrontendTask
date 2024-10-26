@@ -24,10 +24,6 @@ const Header = ({ state, updateState }) => {
                             <BsBell size={24} />
                         </Dropdown>
 
-                        <Dropdown align="end" className="mx-3">
-                            <Image src={"../images/profile.png"} alt="Profile" width={24} height={24} roundedCircle />
-                        </Dropdown>
-
                         <Button variant="light" className="toggle-theme-btn toggle-btn" onClick={toggleDarkMode}>
                             {isDarkMode ? <BsSun size={24} /> : <BsMoon size={24} />}
                         </Button>

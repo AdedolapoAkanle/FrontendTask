@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-// Easing function to slow down the count-up animation
 const easeOutExpo = (t) => {
   return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 };
@@ -8,7 +7,7 @@ const easeOutExpo = (t) => {
 const useScrollTriggeredCountUp = (ref, end, duration = 1000) => {
   const [count, setCount] = useState(0); 
   const isCounting = useRef(false);
-  const frameRate = 1000 / 60; // 60 frames per second
+  const frameRate = 1000 / 60; 
   const totalFrames = Math.round(duration / frameRate);
 
   const handleScroll = useCallback(([entry]) => {

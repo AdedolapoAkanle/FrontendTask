@@ -4,3 +4,4 @@ export const TODOS = "TODOS";
 export const ALBUMS = "ALBUMS";
 export const SETTINGS = "SETTINGS";
 export const HEADER = "HEADER";
+export const TABLE = "TABLE";
