@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { PostAction } from '../redux/actions/type';
 
 const Posts = ({state, updateState}) => {
-    const {posts, search} = state
+    const {posts, search, isCollapsed} = state
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -33,7 +33,7 @@ const Posts = ({state, updateState}) => {
                 />
             </InputGroup> */}
             
-            <TableComponent data={filteredPosts} columns={columns} title={"Posts"}/>
+            <TableComponent data={filteredPosts} columns={columns} title={"Posts"} isCollapsed={isCollapsed}/>
         </div>
     );
 };

@@ -3,7 +3,8 @@ import { POSTS } from "../actions";
 const INITIAL_STATE = {
   postState: {
     posts: [], 
-    search:""
+    search:"",
+    isCollapsed: false
   },
 };
 

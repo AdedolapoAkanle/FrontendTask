@@ -1,40 +1,5 @@
-// import React, { useState } from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Header from './components/Header';
-// import Sidebar from './components/Sidebar';
-// import Users from './components/Users';
-// import Posts from './components/Posts';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import Todos from './components/Todos';
-
-// const App = () => {
-//     const [isCollapsed, setCollapsed] = useState(false);
-
-//     return (
-//         <Router>
-//             <Header />
-//             <div className="d-flex">
-//                 <Sidebar isCollapsed={isCollapsed} setCollapsed={setCollapsed} />
-                
-//                 <div className={`content flex-grow-1 ${isCollapsed ? 'collapsed-content' : ''}`}>
-//                     <Routes>
-//                         <Route path="/users" element={<Users />} />
-//                         <Route path="/posts" element={<Posts />} />
-//                         <Route path="/todos" element={<Todos />} />
-//                         {/* Other Routes */}
-//                     </Routes>
-//                 </div>
-//             </div>
-//         </Router>
-//     );
-// };
-
-// export default App;
-
-
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Users from './components/Users';
 import Posts from './components/Posts';
@@ -43,6 +8,7 @@ import Todos from './components/Todos';
 import Dashboard from './components/Dashboard';
 import axios from 'axios';
 import Albums from './components/Albums';
+import Header from './GlobalComponents/Header';
 
 const App = () => {
     const [isCollapsed, setCollapsed] = useState(false);
@@ -83,7 +49,7 @@ const App = () => {
         <Router>
             <div className={isDarkMode ? 'dark-mode' : ''} style={{ height: "100vh" }}>
                 <Header setDarkMode={setDarkMode} isDarkMode={isDarkMode} />
-                <div className="d-flex">
+                <div className="d-flex" style={{ display:'flex'}}>
                     <Sidebar isCollapsed={isCollapsed} setCollapsed={setCollapsed} isDarkMode={isDarkMode} />
                     <div className="content flex-grow-1">
                         <Routes>

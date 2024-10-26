@@ -3,15 +3,15 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
-    position: relative;
+    position: absolute;
     top: 0;
     z-index: 1000;
 }
 
 .custom-navbar {
     /* flex: 1; */
-    position: absolute;
-    right: -87%;
+    position: relative;
+    right: 0%;
 
 }
 
